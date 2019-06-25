@@ -30,3 +30,17 @@
         </div>
     </div>
 </section>
+
+<section class="section comments">
+        <div class="container">
+            <h2 class="subtitle">
+                <strong><%= @post.comments.count %> Comment(s)</strong>
+            </h2> <!-- subtitle -->
+            <%= render @post.comments %>
+            <div class="comment-form">
+                <hr />
+                <h3 class="subtitle is-3">Leave a reply</h3>
+                <%= render 'comments/form' %>
+            </div> <!-- comment-form -->
+        </div> <!-- container -->
+</section> <!-- comments -->
