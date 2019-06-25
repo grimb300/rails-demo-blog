@@ -17,15 +17,14 @@
                     <%= link_to 'Edit', edit_post_path(@post), class: 'button' %>
                 </p> <!-- level-item -->
                 <p class="level-item">
-                    <!-- TODO: Add functionality -->
-                    <a class="button is-danger">Delete</a>
+                    <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are You Sure?' }, class: 'button is-danger' %>
                 </p> <!-- level-item -->
             </div> <!-- level-right -->
 
         </nav> <!-- level -->
 
         <hr />
-        
+
         <div class="content">
             <%= @post.content %>
         </div>
